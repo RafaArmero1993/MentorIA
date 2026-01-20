@@ -408,5 +408,6 @@ def salidas_profesionales(req: DegreesRequest):
     df_final_applied
 
     #Porporcionamos la respuesta:
-    data = df_final_applied.to_dict(orient="records")  # [{col: val, ...}, ...]
-    return JSONResponse(content={"rows": data, "n": len(data)})
+    data = df_final_applied.to_dict(orient="records")
+
+    return JSONResponse(content={"data": data})
