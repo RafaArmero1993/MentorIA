@@ -32,7 +32,7 @@ El repositorio contiene tres carpetas principales:
 
 ---
 
-## Objetivo MentorIA
+## Objetivo
 
 **Minimizar el riesgo de abandono escolar** a través de la personalización del contenido formativo en base, tanto a los intereses personales de los alumnos, como a sus aspiraciones profesionales futuras. Esta acción se espera conllevare un fortalecimiento del vínculo entre el alumno y su ámbito académico y facilite el desarrollo de un sistema de monitorización para la detección temprana de patrones relevantes relacionados con el abandono de las aulas.
 
