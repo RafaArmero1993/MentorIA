@@ -4,7 +4,7 @@ API desarrollada con FastAPI para generar trabajos monográficos educativos pers
 
 ## Requisitos Previos
 
-- Python 3.8 o superior
+- Python 3.11 o superior
 - Cuenta de Google Cloud Platform con acceso a Gemini API
 
 ## Instalación y Ejecución
@@ -94,5 +94,6 @@ Descarga el archivo HTML del trabajo monográfico generado.
 | 200 | Éxito |
 | 422 | Error de validación |
 | 500 | Error interno del servidor |
+
 
 
