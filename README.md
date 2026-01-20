@@ -3,7 +3,7 @@
 
 # MentorIA
 
-Desarrollado por **Hacktivists**, un grupo multidisciplinar (*Social Justice*, *Communication*, *Legal*, *Digital* y *A*I) de la empresa farmacéutica **Ferrer**, dedicado a desarrollar una solución basada en inteligencia artificial que refleje el propósito de Ferrer de utilizar nuestro negocio para luchar por la justicia social.
+Desarrollado por **Hacktivists**, un grupo multidisciplinar (*Social Justice*, *Communication*, *Legal*, *Digital* y *A*I) de la empresa farmacéutica **Ferrer**, dedicado a desarrollar una solución basada en inteligencia artificial que refleje el propósito de Ferrer de **utilizar nuestro negocio para luchar por la justicia social**.
 
 ## Repositorio
 
