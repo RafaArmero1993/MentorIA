@@ -9,7 +9,7 @@ Desarrollado por **Hacktivists**, un grupo multidisciplinar (*Social Justice*, *
 
 Este epositorio que agrupa la **aplicación principal** y los **servicios auxiliares** encargados de gestionar la **creación de contenidos para el alumno**, junto con **ejemplos de salida** generados por el sistema.
 
-> Estado: **MVP (Minimum Viable Product)**  
+> Estado: **PoC (Prove of Concept)**  
 > El objetivo actual es validar el flujo end-to-end, la viabilidad técnica y la utilidad del contenido generado.  
 > El siguiente paso será **productivizar en la nube** y **escalar progresivamente**.
 
@@ -27,7 +27,7 @@ El repositorio contiene tres carpetas principales:
   Conjunto de **aplicaciones/servicios** que gestionan la **creación de contenidos para el alumno**.  
   Cada subcarpeta representa un servicio o componente responsable de una parte del pipeline.
 
-- **`Ejemplos/`**  
+- **`Contenido Genererado/`**  
   Contiene **contenido generado por la aplicación**, útil para poder visualizar el alcance del contenido generado por MentorIA.
 
 ---
