@@ -1,0 +1,33 @@
+{
+            "Inicio Unidad":{
+                "1":["cabecera","unidad","capitulo","seccion","texto","texto","texto","texto","texto"],
+                "2":["cabecera","unidad","capitulo","seccion","texto","texto","texto","texto","ejemplo"],
+                "3":["cabecera","unidad","capitulo","seccion","texto","texto","texto_imagen","ejemplo"],
+                "4":["cabecera","unidad","capitulo","seccion","texto","texto","imagen","ejemplo"],
+                "5":["cabecera","unidad","capitulo","seccion","texto","texto","imagen","texto"],
+                "6":["cabecera","unidad","capitulo","seccion","imagen_texto","texto_imagen","ejemplo"],
+                "7":["cabecera","unidad","capitulo","seccion","imagen_texto","texto_imagen","texto"]
+            },
+            "Inicio Capítulo":{
+                "1":["capitulo","seccion","texto","texto","texto","texto","texto","texto"],
+                "2":["capitulo","seccion","texto","texto","texto","texto","ejemplo"],
+                "3":["capitulo","seccion","texto","texto","texto","texto","imagen_texto"],
+                "4":["capitulo","seccion","texto","texto","texto","texto","imagen_ejemplo"]
+            },
+            "Inicio Sección":{
+                "1":["seccion","texto","texto","texto","texto","texto","texto"],
+                "2":["seccion","texto","texto","texto","texto","ejemplo"],
+                "3":["seccion","texto","texto","texto","texto","imagen_texto"]
+            },
+            "Continuación":{
+                "1":["texto","texto","texto","texto","texto"],
+                "2":["texto","texto","texto","imagen","imagen_texto"],
+                "3":["texto","texto","texto","imagen","ejemplo"]
+            }
+            ,
+            "Cierre":{
+                "1":["texto","texto","texto","qr"],
+                "2":["texto","texto","texto","texto","texto","qr"],
+                "3":["texto","texto","texto","texto","ejemplo","qr"]
+            }
+}
