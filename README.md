@@ -36,7 +36,7 @@ El repositorio contiene tres carpetas principales:
 
 ---
 
-# Capacidades para el profesorado
+## Capacidades para el profesorado
 
 La plataforma ofrece al profesorado:
 
@@ -51,9 +51,7 @@ La plataforma ofrece al profesorado:
 
 Además, la disponibilidad futura de **información anonimizada** para el seguimiento del alumnado tras la ESO facilitaría el desarrollo de una **red neuronal** capaz de extraer **patrones cada vez más precisos** para **contrarrestar el abandono escolar**.
 
----
-
-# Funcionalidades para el alumnado
+## Capacidades para el alumnado
 
 En paralelo, el alumnado podrá disponer de:
 
