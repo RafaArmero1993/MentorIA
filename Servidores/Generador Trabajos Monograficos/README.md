@@ -14,9 +14,6 @@ Esta aplicación genera trabajos monográficos personalizados para estudiantes d
 
 - Python 3.8 o superior
 - Cuenta de Google Cloud Platform con acceso a Gemini API
-- Archivos de configuración en la carpeta `config/`:
-  - `html_components.json`: Estructura de los componentes HTML
-  - `style.css`: Estilos CSS para el documento
 
 ## Instalación y Ejecución
 
@@ -47,23 +44,6 @@ uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ## Documentación Interactiva
 
 Accede a la documentación Swagger interactiva en: http://127.0.0.1:8000/docs
-
-## Estructura de Carpetas
-
-```
-├── config/              # Archivos de configuración
-│   ├── html_components.json
-│   └── style.css
-├── documents/          # Documentos PDF de referencia
-│   └── Documento_{document_id}.pdf
-├── degrees/            # PDFs con información de grados formativos
-│   └── Grado_{degree_id}.pdf
-├── works/              # Trabajos monográficos generados
-│   └── Work_{work_id}.html
-├── main.py            # Aplicación principal
-├── requirements.txt   # Dependencias
-└── Dockerfile        # Configuración Docker
-```
 
 ## Endpoints
 
@@ -160,26 +140,3 @@ Descarga el archivo HTML del trabajo monográfico generado.
 #### Respuesta
 
 Devuelve el contenido HTML del trabajo monográfico como respuesta HTML.
-
-## Tecnologías Utilizadas
-
-- **FastAPI**: Framework web moderno y rápido
-- **Gemini 2.5 Pro**: Modelo de IA de Google para generación de contenido
-- **BeautifulSoup**: Procesamiento de HTML
-- **Pydantic**: Validación de datos
-- **QRCode**: Generación de códigos QR (si se requiere en futuras versiones)
-
-## Características del Modelo de IA
-
-- **Temperatura**: 0.8 (creatividad moderada-alta)
-- **Top P**: 0.95 (diversidad en las respuestas)
-- **Tokens máximos**: 65535
-- **Formato de salida**: JSON estructurado
-- **Filtros de seguridad**: Desactivados para contenido educativo
-
-## Notas Importantes
-
-- Los archivos PDF deben estar correctamente ubicados en sus carpetas correspondientes
-- El trabajo monográfico generado es extenso y va directo al contenido
-- La duración estimada del trabajo es de 1 mes (1-2 horas semanales)
-- El contenido HTML generado utiliza únicamente etiquetas básicas por diseño
