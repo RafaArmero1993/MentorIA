@@ -1,4 +1,4 @@
-# API de Recomendación de Grados Formativos
+# API de Recomendación de Salidas Formativas
 
 API desarrollada con FastAPI para recomendar grados de Formación Profesional basándose en los intereses del usuario, ubicación y disponibilidad de centros educativos.
 
@@ -102,3 +102,4 @@ Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al 
 | 200 | Éxito - Devuelve los grados recomendados |
 | 422 | Error de validación - Parámetros incorrectos |
 | 500 | Error interno del servidor |
+
