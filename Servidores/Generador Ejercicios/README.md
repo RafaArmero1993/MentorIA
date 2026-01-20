@@ -121,8 +121,9 @@ Descarga un archivo de audio generado.
 
 | Parámetro | Tipo | Descripción |
 |-----------|------|-------------|
-| `filename` | string | Nombre del archivo de audio (ej: "Hint_1.mp3") |
+| `filename` | string | Nombre del archivo de audio (ej: "Audio_1.mp3") |
 
 #### Respuesta
 
 Devuelve el archivo de audio en formato MP3.
+
