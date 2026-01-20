@@ -1,0 +1,93 @@
+html, body{
+    font-family: "Century Gothic", "CenturyGothic", AppleGothic, "URW Gothic L", "Franklin Gothic Medium", Arial, sans-serif;
+    font-size: 10.5px;
+  }
+  .verde{
+    color: #7EB900;
+  }
+  .azul{
+    color: #0066A4;
+  }
+  .blanco{
+    color: #FFFFFF;
+  }
+  .negro{
+    color:#000000;
+  }
+  .negrita{
+    font-weight: 700;
+  }
+  .cabecera{
+    font-size: 10px;
+  }
+  .unidad{
+    font-size: 24px;
+  }
+  .capitulo{
+    font-size: 16px;
+  }
+  .seccion{
+    font-size: 16px;
+  }
+  .texto, .ejemplo, .ejercicio, .trabajo{
+    text-align: justify;
+  }
+  .dina4{
+    width: 100%;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 20mm;
+    box-sizing: border-box;
+  }
+  .qr_panel{
+    display: inline-flex;
+    align-items: center;
+    background: #0098A7;
+    padding: 1px 1px;
+    border-radius: 50px 0 0 50px;
+    gap: 12px;
+    float: right;
+    width: 230px;
+  }
+  .qr_panel__img{
+    padding: 0px;
+    margin-left: 25px;
+    display: grid;
+    place-items: center;
+  }
+  .qr_panel__img img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    display: block;
+  }
+  .panel__text{
+    white-space: nowrap;
+  }
+  .main_imagen {
+    display: flex;
+    justify-content: center;
+  }
+  .main_imagen img {
+    max-width: 500px;
+  }
+  .cabecera-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+  }
+  .cabecera-left, .cabecera-right{
+    flex: 0 0 auto;
+  }
+  .cabecera-center{
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .imagen_cabecera{
+    display: block;
+    max-height: 36px;
+    width: auto;
+  }

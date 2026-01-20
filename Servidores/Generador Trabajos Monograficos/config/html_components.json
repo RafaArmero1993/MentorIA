@@ -1,0 +1,18 @@
+{
+        "cabecera":{
+                "html":"<div class=\"cabecera-row azul negrita cabecera\"><div class=\"cabecera-left\">#asignatura#</div><div class=\"cabecera-center\">#nivel_academico#</div><div class=\"cabecera-right\"><img class=\"imagen_cabecera\" src=\"https://www.ferrer.com/sites/default/files/styles/multimedia_default/public/2021-07/Ferrer%20RGB%20Color%20Transparent.png?itok=MO_6oJIt\"/></div></div>"
+        },
+        "trabajo":{
+                "html":"<div class=\"trabajo negro\">#content#</div>",
+                "text_lengths":[1400]
+        },
+        "unidad":{
+                "html":"<h1 class=\"unidad azul negrita\">#content#</h1>"
+        },
+        "capitulo":{
+                "html":"<h2 class=\"capitulo azul negrita\">#content#</h2>"
+        },
+        "seccion":{
+                "html":"<h3 class=\"seccion azul negrita\">#content#</h3>"
+        }
+}
