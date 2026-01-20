@@ -4,6 +4,15 @@ API desarrollada con FastAPI para recomendar grados de Formación Profesional ba
 
 ## Instalación y Ejecución
 
+### Configuración de Variables de Entorno
+
+Modifica el archivo `.env` introduciéndole las siguientes variables:
+
+```env
+GOOGLE_CLOUD_GEMINI_API_KEY=tu_api_key_aqui
+GOOGLE_CLOUD_MAPS_API_KEY=tu_api_key_aqui
+```
+
 ### Opción 1: Ejecutar con Docker
 ```bash
 docker run --rm -p 8000:8000 --env-file .env mi-api:latest
@@ -99,6 +108,7 @@ Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al 
 | 200 | Éxito - Devuelve los grados recomendados |
 | 422 | Error de validación - Parámetros incorrectos |
 | 500 | Error interno del servidor |
+
 
 
 
