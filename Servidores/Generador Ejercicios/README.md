@@ -2,6 +2,12 @@
 
 API desarrollada con FastAPI para generar ejercicios educativos personalizados en formato HTML. Utiliza IA (Gemini 2.5 Flash) para crear ejercicios adaptados a los intereses del alumno y genera pistas en formato audio mediante text-to-speech (ElevenLabs).
 
+## Requisitos Previos
+
+- Python 3.11 o superior
+- Cuenta de Google Cloud Platform con acceso a Gemini API
+- Cuenta de ElevenLabs con acceso a su API
+
 ## Instalación y Ejecución
 
 ### Configuración de Variables de Entorno
@@ -27,14 +33,15 @@ pip install elevenlabs==2.31.0
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-## Documentación Swagger
-Se pueden probar los endpoints en el Swagger: http://127.0.0.1:8000/docs
+## Documentación Interactiva
+
+Accede a la documentación Swagger interactiva en: http://127.0.0.1:8000/docs
 
 ## Endpoints
 
 ### POST `/generar_ejercicios`
 
-Genera una batería de ejercicios personalizados en formato HTML basándose en un documento PDF de referencia, el nivel académico, la asignatura y los intereses del alumno. Cada ejercicio incluye un código QR que enlaza a un audio con pistas para su resolución.
+Genera una batería de ejercicios personalizados en formato HTML basándose en un contenido formativo de referencia, el nivel académico, la asignatura y los intereses del alumno. Cada ejercicio incluye un código QR que enlaza a un audio con pistas para su resolución en caso de tener dificultades para la resolución.La API proporciona un identificador del documento generado (**exercise_id**).
 
 #### Parámetros de entrada
 
@@ -60,11 +67,7 @@ Genera una batería de ejercicios personalizados en formato HTML basándose en u
 }
 ```
 
-#### Respuesta
-
-Devuelve un JSON con el identificador único del ejercicio generado.
-
-**Estructura de respuesta:**
+**Ejemplo de respuesta:**
 
 ```json
 {
@@ -72,68 +75,30 @@ Devuelve un JSON con el identificador único del ejercicio generado.
 }
 ```
 
-**Campos de la respuesta:**
+### GET `/exercises/{exercise_id}`
 
-| Campo | Descripción |
-|-------|-------------|
-| `exercise_id` | Identificador único del ejercicio generado (aleatorio entre 1-10000000) |
+Visualiza el archivo HTML del ejercicio generado.
 
-#### Proceso interno
+### GET `/audios/{audio_id}`
 
-1. **Carga del documento**: Lee el documento PDF especificado de la base de datos de documentos (`documents/Documento_{document_id}.pdf`)
-2. **Generación de ejercicios**: Utiliza Gemini 2.5 Flash para crear ejercicios originales basados en:
-   - El contenido del documento PDF
-   - Los intereses del alumno (integrados de forma sutil)
-   - Ejercicios previamente generados (para evitar repeticiones)
-3. **Generación de pistas de audio**: Crea audios con ElevenLabs mediante:
-   - Texto generado por Gemini 2.5 Flash con pistas breves para cada ejercicio
-   - Voz de la profesora virtual "Luca"
-   - Formato MP3 (44100 Hz, 128 kbps)
-4. **Creación del HTML**: Genera un documento HTML con:
-   - Estructura personalizada (cabecera, unidad, capítulo, secciones)
-   - Ejercicios con formato HTML limitado (`<p>`, `<b>`, `<i>`, `<u>`, `<ul>`, `<ol>`, `<li>`)
-   - Códigos QR que enlazan a los audios con pistas
-   - Estilos CSS cargados desde `config/style.css`
-5. **Almacenamiento**: Guarda el HTML en `exercises/Exercise_{exercise_id}.html` y los audios en `audios/Hint_{n}.mp3`
+Permite acceder a uno de los audios de ayuda para la resolución de lso ejercicios generados en formato MP3 y accesibles a través del QR.
+
+#### Parámetros de entrada
+
+| Parámetro | Tipo | Descripción |
+|-----------|------|-------------|
+| `audio_id` | string | ID del audio explicativo a descargar |
+
+---
 
 #### Códigos de respuesta
 
 | Código | Descripción |
 |--------|-------------|
-| 200 | Éxito - Devuelve el ID del ejercicio generado |
-| 422 | Error de validación - Parámetros incorrectos |
+| 200 | Éxito |
+| 422 | Error de validación |
 | 500 | Error interno del servidor |
 
----
 
-### GET `/exercises/{exercise_id}`
-
-Descarga el archivo HTML del ejercicio generado.
-
-#### Parámetros de entrada
-
-| Parámetro | Tipo | Descripción |
-|-----------|------|-------------|
-| `exercise_id` | string | ID del ejercicio a descargar |
-
-#### Respuesta
-
-Devuelve el contenido HTML del ejercicio como respuesta HTML.
-
----
-
-### GET `/audios/{filename}`
-
-Descarga un archivo de audio generado.
-
-#### Parámetros de entrada
-
-| Parámetro | Tipo | Descripción |
-|-----------|------|-------------|
-| `filename` | string | Nombre del archivo de audio (ej: "Audio_1.mp3") |
-
-#### Respuesta
-
-Devuelve el archivo de audio en formato MP3.
 
 
