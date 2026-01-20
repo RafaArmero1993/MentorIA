@@ -52,28 +52,10 @@ La aplicación no requiere configuración adicional para uso básico.
 ### Stack Tecnológico
 
 **HTML5**
-- Estructura semántica moderna
-- Elementos multimedia nativos (audio, video)
-- APIs web modernas (LocalStorage, Geolocation)
-- Formularios con validación nativa
-- Accesibilidad ARIA
-
 **CSS3**
-- Flexbox y Grid para layouts responsive
-- Animaciones y transiciones CSS
-- Variables CSS (Custom Properties)
-- Media queries para diferentes dispositivos
-- Efectos visuales modernos (sombras, gradientes, transformaciones)
-
-**JavaScript (Vanilla/ES6+)**
-- Sin dependencias de frameworks pesados
-- Código modular y mantenible
-- Event handling eficiente
-- Manipulación DOM optimizada
-- Funciones de flecha y async/await
-- Destructuring y spread operators
-- Template literals para strings dinámicos
+**JavaScript**
 
 ---
 
 *MentorIA - Transformando la educación a través de la tecnología* 🎓
+
