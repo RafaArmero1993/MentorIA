@@ -78,14 +78,12 @@ Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al 
 
 | Campo | Descripción |
 |-------|-------------|
-| `rows` | Array con los grados formativos recomendados (máximo 3) |
 | `real-decreto` | Enlace al Real Decreto que regula el grado |
 | `curriculo-mecd` | Enlace al currículo oficial del Ministerio de Educación |
 | `perfiles-profesionales` | Enlace al documento PDF con las salidas profesionales |
 | `localidad` | Localidad donde se imparte el grado |
 | `centro` | Nombre del centro educativo |
-| `curriculo-ccaa` | Array con documentos curriculares específicos de la Comunidad Autónoma |
-| `n` | Número total de grados recomendados |
+| `curriculo-ccaa` | URLs con documentos curriculares específicos de la Comunidad Autónoma |
 
 #### Proceso interno
 
@@ -102,4 +100,5 @@ Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al 
 | 200 | Éxito - Devuelve los grados recomendados |
 | 422 | Error de validación - Parámetros incorrectos |
 | 500 | Error interno del servidor |
+
 
