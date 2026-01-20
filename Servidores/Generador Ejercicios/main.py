@@ -76,9 +76,10 @@ client = genai.Client(vertexai=True,api_key=GOOGLE_CLOUD_GEMINI_API_KEY)
 AUDIO_DIR = Path(f"{AUDIOS_FOLDER_NAME}").resolve()
 
 #Se realiza la llamada para descargar archivos:
-@app.get("/audios/{filename}")
-def descargar_audio(filename: str):
-    file_path = (AUDIO_DIR / filename).resolve()
+@app.get("/audios/{audio_id}")
+def descargar_audio(audio_id: str):
+    audio_name =  f"Audio_{audio_id}.mp3"
+    file_path = (AUDIO_DIR / audio_name).resolve()
     return FileResponse(
         path=str(file_path),
         media_type="application/octet-stream",
@@ -266,7 +267,7 @@ def generar_ejercicios(req: ExercisesRequest):
             html_content+=HTML_COMPONENTS[component]["html"].replace("#content#",ejercicios[exercise_component_index])
             exercise_component_index+=1
         elif component == "qr":
-                url = "http://127.0.0.1:8000/audios/Audio_" + str(exercise_component_index) + ".mp3"
+                url = f"http://127.0.0.1:8000/{AUDIOS_FOLDER_NAME}/" + str(exercise_component_index) + ".mp3"
                 qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M,box_size=10,border=4,)
                 qr.add_data(url)
                 qr.make(fit=True)
@@ -289,5 +290,6 @@ def generar_ejercicios(req: ExercisesRequest):
         f.write(html_content)
 
     return JSONResponse(content={"exercise_id": exercise_id})
+
 
 
