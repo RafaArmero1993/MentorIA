@@ -2,6 +2,11 @@
 
 API desarrollada con FastAPI para recomendar grados de Formación Profesional basándose en los intereses del usuario, ubicación y disponibilidad de centros educativos.
 
+## Requisitos Previos
+
+- Python 3.11 o superior
+- Cuenta de Google Cloud Platform con acceso a Gemini API y a Google Maps API
+
 ## Instalación y Ejecución
 
 ### Configuración de Variables de Entorno
@@ -26,14 +31,15 @@ pip install --no-cache-dir -r requirements.txt
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-## Documentación Swagger
-Se pueden probar los endpoints en el Swagger: http://127.0.0.1:8000/docs
+## Documentación Interactiva
+
+Accede a la documentación Swagger interactiva en: http://127.0.0.1:8000/docs
 
 ## Endpoints
 
 ### POST `/salidas_profesionales`
 
-Obtiene los grados formativos recomendados según el perfil del usuario, considerando tipo de grado, ubicación, modalidad, intereses personales y medios de transporte disponibles.
+Obtiene los grados formativos recomendados según los intereses del alumno, los tipo de grado (*básico*, *medio* o *superior*), ubicación geográfica, modalidad (*mañanas* o *tardes*)y medios de transporte disponibles (*propio*  o *público*).
 
 #### Parámetros de entrada
 
@@ -61,53 +67,33 @@ Obtiene los grados formativos recomendados según el perfil del usuario, conside
 }
 ```
 
-#### Respuesta
-
-Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al perfil del usuario.
-
-**Estructura de respuesta:**
+**Ejemplo de respuesta:**
 
 ```json
 {
   "data": [
     {
-      "real-decreto": "URL del Real Decreto",
-      "curriculo-mecd": "URL del currículo del Ministerio",
-      "perfiles-profesionales": "URL del PDF con perfiles profesionales",
-      "localidad": "Localidad del centro",
-      "centro": "Nombre del centro educativo",
-      "curriculo-ccaa": "URL del currículo de la Comunidad Autónoma",
+      "real-decreto": "https://www.boe.es/eli/es/rd/2018/02/19/73",
+      "curriculo-mecd": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2019-10843",
+      "perfiles-profesionales": "[URL del PDF con perfiles profesionales](https://www.todofp.es/dam/jcr:9d8091d9-f6c4-4b81-9580-c09c45d6e9bf/t-tulo-profesional-b-sico-en-acceso-y-conservaci-n-e.pdf)",
+      "localidad": "Xàtiva",
+      "centro": "Instituto de Educación Secundaria | JOSEP DE RIBERA",
+      "curriculo-ccaa": "https://dogv.gva.es/datos/2025/08/13/pdf/2025_32763_es.pdf",
     }
   ]
 }
 ```
 
-**Campos de la respuesta:**
-
-| Campo | Descripción |
-|-------|-------------|
-| `real-decreto` | Enlace al Real Decreto que regula el grado |
-| `curriculo-mecd` | Enlace al currículo oficial del Ministerio de Educación |
-| `perfiles-profesionales` | Enlace al documento PDF con las salidas profesionales |
-| `localidad` | Localidad donde se imparte el grado |
-| `centro` | Nombre del centro educativo |
-| `curriculo-ccaa` | URLs con documentos curriculares específicos de la Comunidad Autónoma |
-
-#### Proceso interno
-
-1. **Extracción de datos**: Realiza web scraping en www.todofp.es para obtener los grados formativos disponibles
-2. **Filtrado geográfico**: Filtra centros por provincia y modalidad especificada
-3. **Cálculo de distancias**: Utiliza Google Maps API para calcular tiempos de desplazamiento según el medio de transporte
-4. **Evaluación de afinidad**: Emplea IA (Gemini 2.5 Flash/Pro) para analizar la afinidad entre los intereses del usuario y las salidas profesionales
-5. **Ranking**: Compara los 5 grados con mayor puntuación (Gemini 2.5 Flash/Pro) y selecciona los más relevantes mediante análisis comparativo
+---
 
 #### Códigos de respuesta
 
 | Código | Descripción |
 |--------|-------------|
-| 200 | Éxito - Devuelve los grados recomendados |
-| 422 | Error de validación - Parámetros incorrectos |
+| 200 | Éxito |
+| 422 | Error de validación |
 | 500 | Error interno del servidor |
+
 
 
 
