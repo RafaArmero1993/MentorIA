@@ -243,7 +243,7 @@ def generar_ejercicios(req: ExercisesRequest):
         audio_document = Path(f"{AUDIOS_FOLDER_NAME}/Audio_{idx+1}.mp3")
         if audio_document.exists():
                 audio_document.unlink(missing_ok=True)
-        with open(f"{AUDIOS_FOLDER_NAME}/Hint_{idx+1}.mp3", "wb") as f:
+        with open(f"{AUDIOS_FOLDER_NAME}/Audio_{idx+1}.mp3", "wb") as f:
             if isinstance(audio, (bytes, bytearray)):
                 f.write(audio)
             else:
@@ -289,4 +289,5 @@ def generar_ejercicios(req: ExercisesRequest):
         f.write(html_content)
 
     return JSONResponse(content={"exercise_id": exercise_id})
+
 
