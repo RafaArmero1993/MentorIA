@@ -60,7 +60,7 @@ Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al 
 
 ```json
 {
-  "rows": [
+  "data": [
     {
       "real-decreto": "URL del Real Decreto",
       "curriculo-mecd": "URL del currículo del Ministerio",
@@ -69,8 +69,7 @@ Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al 
       "centro": "Nombre del centro educativo",
       "curriculo-ccaa": "URL del currículo de la Comunidad Autónoma",
     }
-  ],
-  "n": 3
+  ]
 }
 ```
 
@@ -100,5 +99,6 @@ Devuelve un JSON con los grados formativos recomendados que mejor se ajustan al 
 | 200 | Éxito - Devuelve los grados recomendados |
 | 422 | Error de validación - Parámetros incorrectos |
 | 500 | Error interno del servidor |
+
 
 
