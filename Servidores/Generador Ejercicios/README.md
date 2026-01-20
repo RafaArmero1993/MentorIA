@@ -4,6 +4,15 @@ API desarrollada con FastAPI para generar ejercicios educativos personalizados e
 
 ## Instalación y Ejecución
 
+### Configuración de Variables de Entorno
+
+Modifica el archivo `.env` introduciéndole las siguientes variables:
+
+```env
+GOOGLE_CLOUD_GEMINI_API_KEY=tu_api_key_aqui
+ELEVENLABS_API_KEY=tu_api_key_aqui
+```
+
 ### Opción 1: Ejecutar con Docker
 ```bash
 docker run --rm -p 8000:8000 --env-file .env generador-ejercicios:latest
@@ -126,4 +135,5 @@ Descarga un archivo de audio generado.
 #### Respuesta
 
 Devuelve el archivo de audio en formato MP3.
+
 
