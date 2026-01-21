@@ -17,8 +17,9 @@ Este repositorio que agrupa la **aplicación principal** y los **servicios auxil
 
 ## Arquitectura:
 
-<img width="1281" height="722" alt="image" src="https://github.com/user-attachments/assets/17c98db6-e3bf-4f46-995d-17a2ddd513a7" />
+La arquitectura desarrollada se meustra en la siguiente imagen (⚠️*Advertencia*⚠️: *la versión final de la arquitectura integrará el despliegue en componentes del ecosistema Google Cloud Platform.*).
 
+<img width="1212" height="741" alt="image" src="https://github.com/user-attachments/assets/5ad97023-b054-410c-9719-ddfe4f116800" />
 
 ## Estructura del repositorio
 
