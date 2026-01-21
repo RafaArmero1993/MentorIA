@@ -21,7 +21,7 @@ El repositorio contiene tres carpetas principales:
 
 - **`App/`**  
   Acceso a la **aplicación principal** (interfaz principal del sistema).  
-  Aquí se centraliza la experiencia de uso. Puedes acceder a un repositorio secundario (**MentorIAWebAccess**) donde se encuentra disponible para su visualización, visita [MentorIA Web Access](https://rafaarmero1993.github.io/MentorIAWebAccess/).
+  Aquí se centraliza la experiencia de uso. Puedes acceder a un repositorio secundario (**[MentorIA Web Access](https://rafaarmero1993.github.io/MentorIAWebAccess/)**) donde se encuentra disponible para su visualización, visita.
 
 - **`Servidores/`**  
   Conjunto de **aplicaciones/servicios** que gestionan la **creación de contenidos para el alumno**.  
