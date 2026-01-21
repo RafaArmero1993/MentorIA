@@ -5,7 +5,7 @@ API desarrollada con FastAPI para recomendar grados de Formación Profesional ba
 ## Requisitos Previos
 
 - Python 3.11 o superior
-- Cuenta de Google Cloud Platform con acceso a Gemini API y a Google Maps API
+- Cuenta de Google Cloud Platform con acceso a Gemini API y a Distance Matrix API
 
 ## Instalación y Ejecución
 
@@ -93,6 +93,7 @@ Obtiene los grados formativos recomendados según los intereses del alumno, los 
 | 200 | Éxito |
 | 422 | Error de validación |
 | 500 | Error interno del servidor |
+
 
 
 
