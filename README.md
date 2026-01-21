@@ -15,6 +15,11 @@ Este repositorio que agrupa la **aplicación principal** y los **servicios auxil
 
 ---
 
+## Arquitectura:
+
+<img width="1281" height="722" alt="image" src="https://github.com/user-attachments/assets/17c98db6-e3bf-4f46-995d-17a2ddd513a7" />
+
+
 ## Estructura del repositorio
 
 El repositorio contiene tres carpetas principales:
