@@ -7,7 +7,7 @@ Desarrollado por **Hacktivists**, un grupo multidisciplinar (*Social Justice*, *
 
 ## Repositorio
 
-Este epositorio que agrupa la **aplicación principal** y los **servicios auxiliares** encargados de gestionar la **creación de contenidos para el alumno**, junto con **ejemplos de salida** generados por el sistema.
+Este repositorio que agrupa la **aplicación principal** y los **servicios auxiliares** encargados de gestionar la **creación de contenidos para el alumno**, junto con **ejemplos de salida** generados por el sistema.
 
 > Estado: **PoC (Prove of Concept)**  
 > El objetivo actual es validar el flujo end-to-end, la viabilidad técnica y la utilidad del contenido generado.  
@@ -22,6 +22,7 @@ El repositorio contiene tres carpetas principales:
 - **`App/`**  
   Acceso a la **aplicación principal** (interfaz principal del sistema).  
   Aquí se centraliza la experiencia de uso.
+  ⚠️ **ALERTA:** Puedes acceder a un repositorio secundario (MentorIAWebAccess) Donde se encuentra disponible para su visualización, visita [MentorIA Web Access](https://rafaarmero1993.github.io/MentorIAWebAccess/).
 
 - **`Servidores/`**  
   Conjunto de **aplicaciones/servicios** que gestionan la **creación de contenidos para el alumno**.  
